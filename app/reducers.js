@@ -1,8 +1,8 @@
 import {ADD_CART} from './actions';
 
-export default reducer;
+export default Reducer;
 
-function rootReducer(state, action){
+function Reducer(state, action){
 	switch(action.type){
 		case ADD_CART:
 			return {

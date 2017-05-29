@@ -10,16 +10,16 @@ import About from 'views/About';
 import Cart from 'views/webcart';
 
 
-
+console.log(store);
 ReactDOM.render(
-	<Router history={ hashHistory }>
-		<Provider store={store}>
+	<Provider store={store}>
+		<Router history={ hashHistory }>
     		<Route path='/' component={ App }>
       			<IndexRoute component={ Home } />
       			<Route path='about' component={ About } />
       			<Route path='Cart' component={ Cart } />
     		</Route>
-    	</Provider>	
-  	</Router>,
+  		</Router>
+  	</Provider>,	
   	document.getElementById('app') // eslint-disable-line
 );

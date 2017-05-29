@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addCart } from '../../actions';
 
+
 import Seltzshirt from './seltzshirt.jpg';
 
 
@@ -67,4 +68,10 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(WebShop);
+function mapStateToProps(state) {
+  return {
+    SomeDataProperty: state.Reducer // prop Reducer was taken from your reducer.js because it was passed into here from the connect API
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(WebShop);
