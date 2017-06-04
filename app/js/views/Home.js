@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import Jag from './jag.jpg';
-import Jag2 from './jag2.jpg'
-
+import Jag2 from './jag2.jpg';
+import Logo from './nsplogo.jpeg';
 
 var Music = React.createClass({
 		render: function() {
@@ -27,26 +27,28 @@ export default class Home extends Component {
 	}
 
 	constructor(){
-        super();
-        this.state = {
-        	showSquareOne:false,
-        	showSquareTwo:false
-        }
+    super();
+      this.state = {
+        showSquareOne:false,
+        showSquareTwo:false,
+      }
         this.toggleShowSquare = this.toggleShowSquare.bind(this);
-    }
+  }
 
     toggleShowSquare(property){
    		this.setState((prevState)=>({[property]:!prevState[property]}))
-	}
+	 }
 
-	componentDidMount () {
+	 componentDidMount () {
   		window.scrollTo(0, 0)
-	}
+	 }
+
+
 
   	render() {
     	return (
-      		<div className='Home' id='Home'>
-      			<div id="musicwrapper">
+      		<div className='Home' id='Home'>  
+      			<div id="musicwrapper" className={this.state.showSquareThree?'':'invisible'}>
       				<div id='musicsquare' className={this.state.showSquareOne?'':'invisible'}>
       					<h1>NOCTURNAL SONS POSSE</h1>
       					<div id="musicpics">

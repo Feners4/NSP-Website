@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import {addCart} from './About'; 
+import {addCart} from './Shop'; 
 
 
 export default class Cart extends Component {
 	render() {
-		console.log({addCart});
 		return(
-			<div className= "Webcart" id="Webcart"></div>
+			<div className= "Webcart" id="Webcart">
+				<Component cart={ cartItem } />
+			</div>
 		);
 	}
 }

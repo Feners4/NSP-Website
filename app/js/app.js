@@ -6,18 +6,18 @@ import store from '../store';
 
 import App from 'views/App';
 import Home from 'views/Home';
-import About from 'views/About';
+import Shop from 'views/Shop';
 import Cart from 'views/webcart';
+import AboutNSP from 'views/About';
 
-
-console.log(store);
 ReactDOM.render(
 	<Provider store={store}>
 		<Router history={ hashHistory }>
     		<Route path='/' component={ App }>
       			<IndexRoute component={ Home } />
-      			<Route path='about' component={ About } />
+      			<Route path='Shop' component={ Shop } />
       			<Route path='Cart' component={ Cart } />
+            <Route path='About' component={ AboutNSP } />
     		</Route>
   		</Router>
   	</Provider>,	
