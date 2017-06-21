@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Woods from './woods.jpeg';
 import Logo1 from './whitestar.png';
-import Logo2 from './orangestar.png';
+import Logo2 from './redstar.png';
 
 export default class Splash extends Component {
 	constructor(props) {

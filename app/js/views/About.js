@@ -8,6 +8,13 @@ export default class AboutNSP extends Component {
 			<div className= "AboutNSP" id="AboutNSP">
 				<div id='AboutDiv'>	
 					<img src={ Drawing }></img>
+					<div id='AboutBio'>
+						Nocturnal Sons Posse is an independent record label 
+						based in New York City that represents artists including
+						Czarquan, Donrez, Mikey Fleece, and Tony Seltzer.
+
+	                    
+					</div>
 				</div>
 			</div>
 		);

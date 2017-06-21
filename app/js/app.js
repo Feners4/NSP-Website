@@ -9,6 +9,9 @@ import Home from 'views/Home';
 import Shop from 'views/Shop';
 import Cart from 'views/webcart';
 import AboutNSP from 'views/About';
+import ProductPage from 'views/productpage';
+import ProductPage2 from 'views/productpage2';
+import ProductPage3 from 'views/productpage3';
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -18,6 +21,9 @@ ReactDOM.render(
       			<Route path='Shop' component={ Shop } />
       			<Route path='Cart' component={ Cart } />
             <Route path='About' component={ AboutNSP } />
+            <Route path='ProductPage' component= { ProductPage } />
+            <Route path='ProductPage2' component= { ProductPage2 } />
+            <Route path='ProductPage3' component= { ProductPage3 } />
     		</Route>
   		</Router>
   	</Provider>,	

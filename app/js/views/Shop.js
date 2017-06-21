@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addCart } from '../../actions';
+import { withRouter } from 'react-router';
+//import { Cart } from './webcart';
 
 
-import Seltzshirt from './camodye.jpeg';
+import CamoHat from './camodye.jpeg';
 import TonyTape from './TonyTape.png';
 import RegularHat from './regularhat.jpg';
-
+import JaguarShirt from './JAGUARLOGO.png';
+import SeltzShirt from './seltzshirt.jpg';
+import NocHoodie from './NOCNOCHOODIE.png';
 
 export class WebShop extends Component {
     constructor(props){
@@ -14,6 +18,9 @@ export class WebShop extends Component {
         this.state = {value: 'medium', cartData: {} };
         this.handleClick = this.handleClick.bind(this);
         this.change = this.change.bind(this);
+        this.goProductPage = this.goProductPage.bind(this);
+        this.goProductPage2 = this.goProductPage2.bind(this);
+        this.goProductPage3 = this.goProductPage3.bind(this);
     }
 
     handleClick() {
@@ -33,20 +40,41 @@ export class WebShop extends Component {
         }
     }
 
+    goProductPage() {
+        this.props.router.push('/ProductPage');
+    }
+
+     goProductPage2() {
+        this.props.router.push('/ProductPage2');
+    }
+
+    goProductPage3() {
+        this.props.router.push('/ProductPage3');
+    }
 
     render() {
-        console.log('aa');
         return (
             <div className='Webshop' id='Webshop'>
                 <ul id="Productlist">
                     <div className='Product'>
-                      <img src={Seltzshirt}></img>
-                      <button onClick={this.handleClick} className="addit">Add to cart</button>
-                      <select id="size" onChange={this.change} value={this.state.value}>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                        <option value="x-large">X-large</option>
-                      </select>
+                      <img src={CamoHat} onClick={this.goProductPage}></img>
+                      <div id='infoname'>NOC NOC HAT (CAMO)</div>
+                      <div id='infoprice'>40.00</div>
+                    </div>
+                    <div className='Product'>
+                      <img src={JaguarShirt} onClick={this.goProductPage2}></img>
+                      <div id='infoname'>JAGUAR PYRAMIDS T-SHIRT</div>
+                      <div id='infoprice'>25.00</div>
+                    </div>
+                    <div className='Product'>
+                      <img src={SeltzShirt} onClick={this.goProductPage3}></img>
+                      <div id='infoname'>JAGUAR PYRAMIDS T-SHIRT</div>
+                      <div id='infoprice'>25.00</div>
+                    </div>
+                    <div className='Product'>
+                      <img src={NocHoodie} onClick={this.goProductPage}></img>
+                      <div id='infoname'>JAGUAR PYRAMIDS T-SHIRT</div>
+                      <div id='infoprice'>25.00</div>
                     </div>
                     <div className='Product'>  
                       <img src={RegularHat}></img>
@@ -82,8 +110,8 @@ const mapDispatchToProps = (dispatch) => {
 
 function mapStateToProps(state) {
    return {
-      cartItem: state.cart.item
-   }
+      cart: state.cart
+   };
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(WebShop);
