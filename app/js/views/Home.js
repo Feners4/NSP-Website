@@ -29,15 +29,8 @@ export default class Home extends  Component {
 	constructor(){
     super();
       this.state = {
-        showSquareOne:false,
-        showSquareTwo:false,
       }
-      this.toggleShowSquare = this.toggleShowSquare.bind(this);
   }
-
-  toggleShowSquare(property){
-   	this.setState((prevState)=>({[property]:!prevState[property]}))
-	}
 
 	componentDidMount () {
   	window.scrollTo(0, 0)
@@ -53,16 +46,6 @@ export default class Home extends  Component {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ArAm8uZwwNY" frameBorder="0" allowFullScreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/XfZoOna9ZOg" frameBorder="0" allowFullScreen></iframe>
           </div>     
-      			<div id="musicwrapper" className={this.state.showSquareThree?'':'invisible'}>
-      				<div id='musicsquare' className={this.state.showSquareOne?'':'invisible'}>
-      					<h1>NOCTURNAL SONS POSSE</h1>
-      					<div id="musicpics">
-      						<img src={Jag} tabIndex="1" id='jag1'></img>
-      						<img src={Jag2} tabIndex="1" id='jag2'></img>
-      					</div> 
-      					<div id='Body'></div>
-      				</div>
-      			</div>
       		</div>
     	);
   	}

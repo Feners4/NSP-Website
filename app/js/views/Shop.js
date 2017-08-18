@@ -9,7 +9,7 @@ import CamoHat from './camodye.jpeg';
 import TonyTape from './TonyTape.png';
 import RegularHat from './regularhat.jpg';
 import JaguarShirt from './JAGUARLOGO.png';
-import SeltzShirt from './seltzshirt.jpg';
+import SeltzShirt from './SELTZER LOGO.png';
 import NocHoodie from './NOCNOCHOODIE.png';
 
 export class WebShop extends Component {
@@ -21,20 +21,24 @@ export class WebShop extends Component {
         this.goProductPage = this.goProductPage.bind(this);
         this.goProductPage2 = this.goProductPage2.bind(this);
         this.goProductPage3 = this.goProductPage3.bind(this);
+        this.goProductPage4 = this.goProductPage4.bind(this);
+        this.goProductPage5 = this.goProductPage5.bind(this);
     }
 
     handleClick() {
-        let cart = {price:0,item:"userselection",size:this.state.value};
+        let cart = {price:this.description2.innerHTML,item:this.description.innerHTML,size:this.state.value};
         this.props.onCartAdd(cart);
+        console.log(cart);
+        this.itemSelection(cart);
     } 
 
     change(e){
         this.setState({value: e.target.value})
     }
 
-    itemSelection(){
-        let userOrder = {price:0,item:"",size:""};
-        let userItem = "";
+    itemSelection(cart){
+        let userItem = cart;
+        let userSelection = cart
         if (userItem == "shirt1") {
            let itemPrice = 20.00;
         }
@@ -52,6 +56,14 @@ export class WebShop extends Component {
         this.props.router.push('/ProductPage3');
     }
 
+    goProductPage4() {
+        this.props.router.push('/ProductPage4');
+    }
+
+    goProductPage5() {
+        this.props.router.push('/ProductPage5');
+    }
+
     render() {
         return (
             <div className='Webshop' id='Webshop'>
@@ -59,40 +71,32 @@ export class WebShop extends Component {
                     <div className='Product'>
                       <img src={CamoHat} onClick={this.goProductPage}></img>
                       <div id='infoname'>NOC NOC HAT (CAMO)</div>
-                      <div id='infoprice'>40.00</div>
+                      <div id='infoprice'>Sold Out</div>
                     </div>
                     <div className='Product'>
                       <img src={JaguarShirt} onClick={this.goProductPage2}></img>
                       <div id='infoname'>JAGUAR PYRAMIDS T-SHIRT</div>
-                      <div id='infoprice'>25.00</div>
+                      <div id='infoprice'>Sold Out</div>
                     </div>
                     <div className='Product'>
                       <img src={SeltzShirt} onClick={this.goProductPage3}></img>
-                      <div id='infoname'>JAGUAR PYRAMIDS T-SHIRT</div>
+                      <div id='infoname'>Tony Seltzer T-SHIRT</div>
                       <div id='infoprice'>25.00</div>
                     </div>
                     <div className='Product'>
-                      <img src={NocHoodie} onClick={this.goProductPage}></img>
-                      <div id='infoname'>JAGUAR PYRAMIDS T-SHIRT</div>
-                      <div id='infoprice'>25.00</div>
+                      <img src={NocHoodie} onClick={this.goProductPage4}></img>
+                      <div id='infoname'>NOC NOC Hoodie</div>
+                      <div id='infoprice'>45.00</div>
                     </div>
                     <div className='Product'>  
                       <img src={RegularHat}></img>
-                      <button onClick={this.handleClick} className="addit">Add to cart</button>
-                      <select id="size" onChange={this.change} value={this.state.value}>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                        <option value="x-large">X-large</option>
-                      </select>
+                      <div id='infoname'>NOC NOC HAT</div>
+                      <div id='infoprice'>Sold Out</div>
                     </div>
                     <div className='Product'>  
-                      <img src={TonyTape}></img>
-                      <button onClick={this.handleClick} className="addit">Add to cart</button>
-                      <select id="size" onChange={this.change} value={this.state.value}>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                        <option value="x-large">X-large</option>
-                      </select>
+                      <img src={TonyTape} onClick={this.goProductPage5}></img>
+                      <div id='infoname'>Tony Seltzer</div>
+                      <div id='infoprice'>20.00</div>
                     </div>
                 </ul>
             </div>

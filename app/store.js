@@ -1,15 +1,19 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { persistStore, autoRehydrate } from 'redux-persist';
 import  reducer  from './reducers';
 import thunkMiddleware from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 
 
-
 const store = createStore(
   reducer,
-  applyMiddleware(
-    createLogger(),
-    thunkMiddleware
+  undefined,
+  compose(
+  	applyMiddleware(createLogger(), thunkMiddleware),
+  	autoRehydrate()
   )
 );
+
+persistStore(store, {whitelist: ['cart']});
+
 export default store; 
