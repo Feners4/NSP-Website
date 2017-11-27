@@ -35,9 +35,10 @@ export default class Splash extends Component {
 	render() {
 		return(
 			<div id='Splashwrapper'>
-				<img id='logoc' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} src={this.state.imgSrc} onClick={this.props.onLogoClicked}></img>
-            	<img id='backg' src={Woods}></img>
-        	</div>    
-        );	
+        <div id="SplashButton">
+          <img id='logoc' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} src={this.state.imgSrc} onClick={this.props.onLogoClicked}></img>
+        </div>
+      </div>
+    );
 	}
 }
