@@ -8,7 +8,7 @@ import App from 'views/App';
 import Home from 'views/Home';
 import Shop from 'views/Shop';
 import Cart from 'views/webcart';
-import AboutNSP from 'views/About';
+import MusicNSP from 'views/Music';
 import Contact from 'views/Contact'
 import ProductPage from 'views/productpage';
 import ProductPage2 from 'views/productpage2';
@@ -23,7 +23,7 @@ ReactDOM.render(
       			<IndexRoute component={ Home } />
       			<Route path='Shop' component={ Shop } />
       			<Route path='Cart' component={ Cart } />
-            <Route path='About' component={ AboutNSP } />
+            <Route path='Music' component={ MusicNSP } />
             <Route path='Contact' component={ Contact } />
             <Route path='ProductPage' component= { ProductPage } />
             <Route path='ProductPage2' component= { ProductPage2 } />
