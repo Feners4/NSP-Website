@@ -14,7 +14,7 @@ export default class Contact extends Component {
 					<div id='instagramWrapper'>
 						INSTAGRAM:
 						<a href="http://www.instagram.com/nocturnalsonsposse"> 
-							@nocturnalsonsposse
+							 @nocturnalsonsposse
 						</a>
 					</div>
 				</div>
