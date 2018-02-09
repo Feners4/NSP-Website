@@ -41,6 +41,8 @@ export default class Home extends  Component {
     	return (
       		<div className='Home' id='Home'>
           <div id='homecontentwrapper'>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fZWVDVFWqhQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jM4AUASlD4A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Xk0DsDTSp4w" frameborder="0" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMVmc1iH5xQ" frameborder="0" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ArAm8uZwwNY" frameBorder="0" allowFullScreen></iframe>
