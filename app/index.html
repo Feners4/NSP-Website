@@ -404,35 +404,40 @@
             -ms-flex-direction: row;
                 flex-direction: row;  
       }
-    #ContactWrapper {
-      font-size: 30px;
-      font-weight: bold;
-      position: relative;
-      top: 100px;
     }
 
-    #emailWrapper {
-      display: list-item;
-      list-style:none;
-      position: relative;
-      margin: 40px;
-    }
+    @media screen and (min-width: 1024px) {
+      #ContactWrapper {
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 100px;
+        -webkit-text-size-adjust: 100%;
+      }
 
-    #instagramWrapper {
-      display: list-item;
-      list-style:none;
-      position: relative;
-      margin: 40px;
-    }
+      #emailWrapper {
+        display: list-item;
+        list-style:none;
+        position: relative;
+        margin: 40px;
+      }
 
-    #instagramWrapper a {
-      text-decoration: none;
-      color: inherit;
-    }
+      #instagramWrapper {
+        display: list-item;
+        list-style:none;
+        position: relative;
+        margin: 40px;
+      }
 
-    #instagramWrapper a:visited { 
-      text-decoration: none;
-      color: inherit; 
+      #instagramWrapper a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #instagramWrapper a:visited { 
+        text-decoration: none;
+        color: inherit; 
+      }
     }
   </style>
 </head>
