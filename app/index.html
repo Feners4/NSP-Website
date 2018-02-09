@@ -3,6 +3,7 @@
 <head>
   <title>NSP</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <style>
     html {
@@ -413,6 +414,18 @@
         position: relative;
         top: 100px;
         -webkit-text-size-adjust: 100%;
+         -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+        padding: 100px 50px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
       }
 
       #emailWrapper {
