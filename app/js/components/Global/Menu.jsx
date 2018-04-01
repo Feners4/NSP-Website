@@ -110,7 +110,7 @@ export default class Menu extends Component {
   	render() {
     	return (
     			<div className='Menu' id='Menu'>
-      			<Link to='/'><img onMouseOver={this.handleMouseOver2} onMouseOut={this.handleMouseOut2} src={this.state.homeSrc}></img></Link> <Link to='/Music'><img onMouseOver={this.handleMouseOver3} onMouseOut={this.handleMouseOut3} src={this.state.musicSrc}></img></Link> <img src={this.state.imgSrc} onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} onClick={this.goHomePage}></img> <a href="http://nsp.bigcartel.com/"><img onMouseOver={this.handleMouseOver4} onMouseOut={this.handleMouseOut4} src={this.state.shopSrc}></img></a>  <Link to='/Contact'><img onMouseOver={this.handleMouseOver5} onMouseOut={this.handleMouseOut5} src={this.state.contactSrc}></img></Link>
+      			<Link to='/'><img onMouseOver={this.handleMouseOver2} onMouseOut={this.handleMouseOut2} src={this.state.homeSrc}></img></Link> <Link to='/Music'><img onMouseOver={this.handleMouseOver3} onMouseOut={this.handleMouseOut3} src={this.state.musicSrc}></img></Link> <img src={this.state.imgSrc} onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} onClick={this.goHomePage}></img> <a href="http://nspnyc.bigcartel.com/"><img onMouseOver={this.handleMouseOver4} onMouseOut={this.handleMouseOut4} src={this.state.shopSrc}></img></a>  <Link to='/Contact'><img onMouseOver={this.handleMouseOver5} onMouseOut={this.handleMouseOut5} src={this.state.contactSrc}></img></Link>
       			<hr />
     			</div>
     	);
