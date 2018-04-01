@@ -315,13 +315,21 @@
       padding: 100px 50px;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+          -ms-flex-direction: row;
+              flex-direction: row;
 
     }
 
-    #MusicNSP iframe{
-      display: inline;
+    #column1, #column2{
+      width: 50%;
+    }
+
+    #MusicNSP #column1{
+      float: left;
+    }
+
+    #MusicNSP #column2{
+      float: right;
     }
 
     #AboutNSP img{
@@ -396,11 +404,25 @@
             -ms-flex-direction: row;
                 flex-direction: row;  
       }
+    }
+
     #ContactWrapper {
       font-size: 30px;
       font-weight: bold;
       position: relative;
       top: 100px;
+      -webkit-text-size-adjust: 100%;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+          align-items: flex-start;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
     }
 
     #emailWrapper {
